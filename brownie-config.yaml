@@ -1,0 +1,8 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@2.5.0
+  - Robert29000/TestSwap-core@1.0.0
+compiler:
+  solc:
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@2.5.0'
+      - '@testswapcore=Robert29000/TestSwap-core@1.0.0'
