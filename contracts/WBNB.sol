@@ -19,12 +19,10 @@ contract WBNB {
     mapping (address => mapping (address => uint))  public  allowance;
 
     function() external payable {
-        balanceOf[msg.sender] = balanceOf[msg.sender].add(msg.value);
-        emit Deposit(msg.sender, msg.value);
-        // Sorry for duplication. deposit() raising DeclarationError.
+        deposit();
     }
 
-    function deposit() external payable {
+    function deposit() public payable {
         balanceOf[msg.sender] = balanceOf[msg.sender].add(msg.value);
         emit Deposit(msg.sender, msg.value);
     }
